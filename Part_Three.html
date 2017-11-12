@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Huy Le Midterm PART THREE</title>
+    <link href="Part_Three_Style.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <script src="jquery-3.1.1.js"></script>
+    <script>
+
+        var timeToFadeOut = 1000;
+        var timeToFadeIn = 1000;
+        var time = 3000;
+
+        var myTravelSiteSlideShowClass = '.travelSiteSlideShow';
+
+        $(function ()
+        {
+            $('#travelSiteSlideShow div:gt(0)').hide();
+            setInterval(function ()
+            {
+                $('.travelSiteSlideShow :eq(0)').fadeOut(timeToFadeOut).next().fadeIn(timeToFadeIn).end().appendTo(myTravelSiteSlideShowClass);
+            }, time);
+        });
+    </script>
+</head>
+<body>
+<header>
+    <h1>
+        Huy Le Tourist Company
+    </h1>
+</header>
+
+<div id="navigation" style="text-align: center;">
+    <nav>
+        <a href="index.html">Part One</a> |
+        <a href="Part_Two.html">Part Two</a> |
+        <a href="Part_Three.html">Part Three</a> |
+        <a href="Part_Four.html">Part Four</a>
+    </nav><br><br><br><br>
+</div>
+
+<div class="logo">
+    <div style="text-align: center;">
+        <img src="photos/earth_logo.png" alt="my earth">
+    </div>
+</div>
+
+
+<div class="travelSiteSlideShow" id="travelSiteSlideShow">
+    <div>
+        <img src="travelsite/yellow.jpg" alt="yellow flowers"/>
+        <p>This is a beautiful yellow flowers field with nice green beautiful skies</p>
+    </div>
+    <div>
+        <img src="travelsite/green.jpg" alt="green lake"/>
+        <p>This is a beautiful green lake with good reflections and trees</p>
+    </div>
+    <div>
+        <img src="travelsite/lake.jpg" alt="sunset"/>
+        <p>fantasic sunset view with nice view of mountains</p>
+    </div>
+    <div>
+        <img src="travelsite/planet.jpg" alt="new planet"/>
+        <p>new planet possibly?</p>
+    </div>
+    <div>
+        <img src="travelsite/rocks.jpg" alt="rocky"/>
+        <p>There are lots of rocks in this picture right by a nice fall of water</p>
+    </div>
+    <div>
+        <img src="travelsite/sand.jpg" alt="sand view"/>
+        <p>beautiful sand view with godrays and the colors are oh my gorgeous</p>
+    </div>
+    <div>
+        <img src="travelsite/sunset.jpg" alt="nice sunset"/>
+        <p>beautiful sunset</p>
+    </div>
+    <div>
+        <img src="travelsite/tree.jpg" alt="trees for life"/>
+        <p>beautiful trees and nice sky</p>
+    </div>
+</div>
+
+<footer>
+    <div id="contact">
+        Contact:<br>
+        Huy Le Tourist Company<br>
+        Address: 102 - 999 luxstone street SE<br>
+        Airdrie, AB t2c 9a9<br>
+        Phone: 888-888-8888
+    </div>
+</footer>
+
+</body>
+</html>

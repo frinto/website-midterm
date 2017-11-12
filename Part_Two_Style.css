@@ -1,0 +1,13 @@
+body {
+
+    text-align: center;
+    height: auto;
+    width: 100%;
+    background-image: url("photos/snow.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+}

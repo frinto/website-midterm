@@ -1,0 +1,61 @@
+
+body
+{
+    background-image: -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            color-stop(0, #394F01),
+            color-stop(1, #1888B8)
+    );
+    height: 900px;
+    background-image: -o-linear-gradient(bottom, #191B58 0%, #1D7D7B 100%);
+    background-image: -moz-linear-gradient(bottom, #191B58 0%, #1D7D7B 100%);
+    background-image: -webkit-linear-gradient(bottom, #191B58 0%, #1D7D7B 100%);
+    background-image: -ms-linear-gradient(bottom, #191B58 0%, #1D7D7B 100%);
+    background-image: linear-gradient(to bottom, #191B58 0%, #1D7D7B 100%);
+}
+
+p
+{
+    font-size: 18px;
+    color: antiquewhite;
+}
+
+.travelSiteSlideShow
+{
+    position: relative;
+    height: 512px;
+    width: 512px;
+    margin: auto;
+
+    border: double;
+    border-width: 10px;
+}
+
+.travelSiteSlideShow > div
+{
+    position: absolute;
+}
+
+header
+{
+    text-shadow: 5px 5px seagreen;
+    text-align: center;
+    color: #ededed;
+}
+
+#contact
+{
+    color: #1D7D7B;
+    border: groove;
+    margin: 45px;
+    text-align: center;
+}
+
+#navigation a
+{
+    border: groove;
+    color: whitesmoke;
+
+}

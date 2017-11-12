@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="Part_Four_Style.css">
+    <script type="text/javascript" src="Part_Four_Script.js"></script>
+    <title>Huy Le MIDTERM PART FOUR</title>
+</head>
+<body>
+<div id="navigation" style="text-align: center;">
+    <nav>
+        <a href="index.html">Part One</a> |
+        <a href="Part_Two.html">Part Two</a> |
+        <a href="Part_Three.html">Part Three</a> |
+        <a href="Part_Four.html">Part Four</a>
+    </nav>
+    <br><br><br><br>
+</div>
+<div class="information" id="information">
+    <form name="informationForm" method="get" onsubmit="return false">
+        <h2>Information</h2>
+        <table>
+            <tr>
+                <td>
+                    First Name:<br>
+                    <input type="text" name="firstname" maxlength="20" pattern=".{2,20}" required
+                           title="2 characters minimum 20 characters max" autofocus>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Last Name:<br>
+                    <input type="text" name="lastname" maxlength="20" pattern=".{2,20}" required
+                           title="2 characters minimum 20 characters max">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Address:<br>
+                    <input type="text" name="address" pattern=".{2,20}" required title="2 characters minimum">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Postal Code:<br>
+                    <input type="text" name="code" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Phone Number<br>
+                    <input type="tel" name="phoneNum" placeholder="xxx-xxx-xxxx" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Email:<br>
+                    <input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                           placeholder="prefix_name@suffix.domain" required
+                           title="must be in format prefix_name@suffix.domain">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Type Of Planter: <br><br>
+                    <input type="radio" name="typeOfPlanter" value="0.10">Square/Rectangular Cubes $0.10/cm3<br><br>
+
+                    <input type="radio" name="typeOfPlanter" value="0.12">Flat bottomed cylinders $0.12/cm3<br><br>
+
+                    <input type="radio" name="typeOfPlanter" value="0.15">½ Spherical $0.15/cm3<br><br>
+
+                    <input type="radio" name="typeOfPlanter" value="0.20">Truncated cone $0.20/cm3<br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="placeOrder" id="placeOrder" value="Press"
+                           onClick="collectInfo();">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div class="showMeForSquareRectangular" id="showMeForSquareRectangular" style="display:none;">
+    <form name="sqrRectConeForm" id="sqrRectConeForm">
+        <h2>Dimensions</h2>
+        <table>
+            <tr>
+                <td>
+                    <input type="number" id="lengthForSqrRect">length <br>
+                    <input type="number" id="widthForSqrRect">width<br>
+                    <input type="number" id="heightForSqrRect">height<br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" name="sqrRectsButton" id="sqrRectButton" value="Place Order"
+                           onClick="calculateInfoSqrRect();">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div class="showMeForFlatBottomCylinder" id="showMeForFlatBottomCylinder" style="display:none;">
+    <form name="flatBottomCylForm" id="flatBottomCylForm">
+        <h2>Dimensions</h2>
+        <table>
+            <tr>
+                <td>
+                    <input type="number" id="radiusForCyl">radius <br>
+                    <input type="number" id="heightForCyl">height<br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" name="cylsButton" id="cylButton" value="Place Order"
+                           onClick="calculateInfoCyl();">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div class="showMeForSphere" id="showMeForSphere" style="display:none;">
+    <form name="sphereForm" id="sphereForm">
+        <h2>Dimensions</h2>
+        <table>
+            <tr>
+                <td>
+                    <input type="number" id="radiusForSphere">radius <br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" name="spheresButton" id="sphereButton" value="Place Order"
+                           onClick="calculateInfoSphere();">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div class="showMeForCone" id="showMeForCone" style="display:none;">
+    <form name="coneForm" id="coneForm">
+        <h2>Dimensions</h2>
+        <table>
+            <tr>
+                <td>
+                    <input type="number" id="heightForCone">height <br>
+                    <input type="number" id="radius1ForCone">radius 1 <br>
+                    <input type="number" id="radius2ForCone">radius 2 <br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" name="conesButton" id="coneButton" value="Place Order"
+                           onClick="calculateInfoCone();">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div class="result_position">
+    <h2>Result: </h2>
+    <span id="result"></span>
+</div>
+</body>
+</html>
